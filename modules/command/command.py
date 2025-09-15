@@ -37,36 +37,96 @@ class Command:  # pylint: disable=too-many-instance-attributes
         cls,
         connection: mavutil.mavfile,
         target: Position,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
-    ):
+    ) -> object:
         """
         Falliable create (instantiation) method to create a Command object.
         """
-        pass  #  Create a Command object
+        return Command(cls.__private_key, connection, target, local_logger)
 
     def __init__(
         self,
         key: object,
         connection: mavutil.mavfile,
         target: Position,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
     ) -> None:
         assert key is Command.__private_key, "Use create() method"
 
-        # Do any intializiation here
+        self.local_logger = local_logger
+        self.target = target
+        self.connection = connection
+        self.total_xv = 0
+        self.total_yv = 0
+        self.total_zv = 0
+        self.steps = 0
 
     def run(
         self,
-        args,  # Put your own arguments here
-    ):
+        target: Position,
+        path: telemetry.TelemetryData,  # Put your own arguments here
+    ) -> list:
         """
         Make a decision based on received telemetry data.
         """
+        output_list = []
+        self.steps += 1
+        self.total_xv += path.x_velocity
+        self.total_yv += path.y_velocity
+        self.total_zv += path.z_velocity
+        average_velocity = (
+            self.total_xv / self.steps,
+            self.total_yv / self.steps,
+            self.total_zv / self.steps,
+        )
         # Log average velocity for this trip so far
-
+        self.local_logger.info(f"Average Velocity: {average_velocity}")
         # Use COMMAND_LONG (76) message, assume the target_system=1 and target_componenet=0
+        if target.z - path.z > 0.5 or target.z - path.z < -0.5:
+            amount_to_move = target.z - path.z
+            # move the drone
+            self.connection.mav.command_long_send(
+                1,
+                0,
+                mavutil.mavlink.MAV_CMD_CONDITION_CHANGE_ALT,
+                confirmation=0,
+                param1=1,
+                param2=0,
+                param3=0,
+                param4=0,
+                param5=0,
+                param6=0,
+                param7=target.z,
+            )
+            output_list.append(f"CHANGE_ALTITUDE: {amount_to_move}")
+            return output_list
+
+        target_angle = math.atan2(target.y - path.y, target.x - path.x)
+        angle_difference = target_angle - path.yaw
+        if angle_difference > (math.pi):
+            angle_difference = (2 * math.pi) - angle_difference
+        elif angle_difference < -1 * (math.pi):
+            angle_difference = -1 * (2 * math.pi) - angle_difference
+        angle_difference_deg = math.degrees(angle_difference)
+        if angle_difference_deg > 5 or angle_difference_deg < -5:
+            # rotate the drone
+            direction = -1 if angle_difference_deg > 0 else 1
+            self.connection.mav.command_long_send(
+                1,
+                0,
+                mavutil.mavlink.MAV_CMD_CONDITION_YAW,
+                confirmation=0,
+                param1=angle_difference_deg,
+                param2=5,
+                param3=direction,
+                param4=1,
+                param5=0,
+                param6=0,
+                param7=0,
+            )
+            output_list.append(f"CHANGING_YAW: {angle_difference_deg}")
+            return output_list
+        return output_list
         # The appropriate commands to use are instructed below
 
         # Adjust height using the comand MAV_CMD_CONDITION_CHANGE_ALT (113)

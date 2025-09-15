@@ -18,13 +18,14 @@ from ..common.modules.logger import logger
 # =================================================================================================
 def heartbeat_sender_worker(
     connection: mavutil.mavfile,
-    args,  # Place your own arguments here
+    controller: worker_controller.WorkerController,  # Place your own arguments here
     # Add other necessary worker arguments here
 ) -> None:
     """
     Worker process.
 
-    args... describe what the arguments are
+    connection - Connection to the drone
+    controller - Current state of processes
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -47,7 +48,10 @@ def heartbeat_sender_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (heartbeat_sender.HeartbeatSender)
-
+    heart_beat_sender_object = heartbeat_sender.HeartbeatSender.create(connection)
+    while not controller.is_exit_requested():
+        heart_beat_sender_object.run()
+        time.sleep(1)
     # Main loop: do work.
 
 

@@ -18,13 +18,16 @@ from ..common.modules.logger import logger
 # =================================================================================================
 def telemetry_worker(
     connection: mavutil.mavfile,
-    args,  # Place your own arguments here
+    controller: worker_controller.WorkerController,
+    telemetry_queue: queue_proxy_wrapper.QueueProxyWrapper,  # Place your own arguments here
     # Add other necessary worker arguments here
 ) -> None:
     """
     Worker process.
 
-    args... describe what the arguments are
+    connection - connection to drone
+    controller - worker controller
+    telemetry_queue - worker output queue
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -47,7 +50,11 @@ def telemetry_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (telemetry.Telemetry)
-
+    telemetry_object = telemetry.Telemetry.create(connection, local_logger)
+    while not controller.is_exit_requested():
+        result = telemetry_object.run()
+        if result:
+            telemetry_queue.queue.put(result)
     # Main loop: do work.
 
 

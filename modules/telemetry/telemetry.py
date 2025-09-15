@@ -76,37 +76,64 @@ class Telemetry:
     def create(
         cls,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
-    ):
+    ) -> object:
         """
         Falliable create (instantiation) method to create a Telemetry object.
         """
-        pass  # Create a Telemetry object
+        return Telemetry(cls.__private_key, connection, local_logger)  # Create a Telemetry object
 
     def __init__(
         self,
         key: object,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
     ) -> None:
         assert key is Telemetry.__private_key, "Use create() method"
 
-        # Do any intializiation here
+        self.connection = connection
+        self.local_logger = local_logger
 
     def run(
         self,
-        args,  # Put your own arguments here
-    ):
+        # Put your own arguments here
+    ) -> TelemetryData:
         """
         Receive LOCAL_POSITION_NED and ATTITUDE messages from the drone,
         combining them together to form a single TelemetryData object.
         """
-        # Read MAVLink message LOCAL_POSITION_NED (32)
-        # Read MAVLink message ATTITUDE (30)
-        # Return the most recent of both, and use the most recent message's timestamp
-        pass
+        start_time = time.time()
+        local_position = None
+        attitude = None
+        while time.time() - start_time < 1:
+            msg = self.connection.recv_match(blocking=False)
+            if msg:
+                self.local_logger.info(f"Received: {msg.get_type()}")
+            # Read MAVLink message LOCAL_POSITION_NED (32)
+            if msg and msg.get_type() == "LOCAL_POSITION_NED":
+                local_position = msg
+            elif msg and msg.get_type() == "ATTITUDE":
+                attitude = msg
+            if attitude and local_position:
+                max_time_since_boot = max(local_position.time_boot_ms, attitude.time_boot_ms)
+                # Return the most recent of both, and use the most recent message's timestamp
+                return TelemetryData(
+                    max_time_since_boot,
+                    local_position.x,
+                    local_position.y,
+                    local_position.z,
+                    local_position.vx,
+                    local_position.vy,
+                    local_position.vz,
+                    attitude.roll,
+                    attitude.pitch,
+                    attitude.yaw,
+                    attitude.rollspeed,
+                    attitude.pitchspeed,
+                    attitude.yawspeed,
+                )
+        self.local_logger.warning("Did not receive messages, restarting...")
+        return None
 
 
 # =================================================================================================

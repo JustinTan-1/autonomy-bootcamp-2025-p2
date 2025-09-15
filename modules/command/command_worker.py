@@ -19,13 +19,20 @@ from ..common.modules.logger import logger
 def command_worker(
     connection: mavutil.mavfile,
     target: command.Position,
-    args,  # Place your own arguments here
+    controller: worker_controller.WorkerController,
+    command_input_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    command_output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    # Place your own arguments here
     # Add other necessary worker arguments here
 ) -> None:
     """
     Worker process.
 
-    args... describe what the arguments are
+    connection: connection to drone,
+    target: position of interest,
+    controller: worker controller,
+    command_input_queue: queue of inputs,
+    command_output_queue: queue of outputs,
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -48,7 +55,14 @@ def command_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (command.Command)
-
+    command_object = command.Command.create(connection, target, local_logger)
+    while not controller.is_exit_requested():
+        if not command_input_queue.queue.empty():
+            path = command_input_queue.queue.get()
+            output_list = command_object.run(target, path)
+            if output_list:
+                for item in output_list:
+                    command_output_queue.queue.put(item)
     # Main loop: do work.
 
 
