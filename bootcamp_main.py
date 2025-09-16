@@ -85,10 +85,6 @@ def main() -> int:
         mp_manager,
         QUEUE_MAX_SIZE,
     )
-    telemetry_output_queue = queue_proxy_wrapper.QueueProxyWrapper(
-        mp_manager,
-        QUEUE_MAX_SIZE,
-    )
     command_input_queue = queue_proxy_wrapper.QueueProxyWrapper(
         mp_manager,
         QUEUE_MAX_SIZE,
@@ -140,7 +136,7 @@ def main() -> int:
             connection,
         ),
         input_queues=[],  # Note that input/output queues must be in the proper order
-        output_queues=[telemetry_output_queue],
+        output_queues=[command_input_queue],
         controller=controller,  # Worker controller
         local_logger=main_logger,  # Main logger to log any failures during worker creation
     )
@@ -215,7 +211,7 @@ def main() -> int:
 
     # Main's work: read from all queues that output to main, and log any commands that we make
     # Continue running for 100 seconds or until the drone disconnects
-    output_queues = [heartbeat_receiver_output_queue, telemetry_output_queue, command_output_queue]
+    output_queues = [heartbeat_receiver_output_queue, command_output_queue]
     disconnect_time = time.time() + 100
     while time.time() < disconnect_time and connection:
         for item in output_queues:
@@ -228,7 +224,6 @@ def main() -> int:
 
     # Fill and drain queues from END TO START
     heartbeat_receiver_output_queue.fill_and_drain_queue()
-    telemetry_output_queue.fill_and_drain_queue()
     command_input_queue.fill_and_drain_queue()
     command_output_queue.fill_and_drain_queue()
 

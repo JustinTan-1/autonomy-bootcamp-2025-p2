@@ -1,17 +1,17 @@
-14:19:23: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\modules\common\modules\logger\logger_main_setup.py | setup_main_logger | 62] main logger initialized
-14:19:24: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | main | 117] Connected!
-14:19:24: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 76] Connected
-14:19:25: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 76] Connected
-14:19:26: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 76] Connected
-14:19:27: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 76] Connected
-14:19:28: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 76] Connected
-14:19:33: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 74] Disconnected
-14:19:34: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 74] Disconnected
-14:19:35: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 74] Disconnected
-14:19:36: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 74] Disconnected
-14:19:37: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 76] Connected
-14:19:38: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 76] Connected
-14:19:39: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 76] Connected
-14:19:40: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 76] Connected
-14:19:41: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 76] Connected
-14:19:43: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 76] Connected
+17:05:35: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\modules\common\modules\logger\logger_main_setup.py | setup_main_logger | 62] main logger initialized
+17:05:35: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | main | 116] Connected!
+17:05:35: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 75] Connected
+17:05:36: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 75] Connected
+17:05:37: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 75] Connected
+17:05:38: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 75] Connected
+17:05:39: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 75] Connected
+17:05:44: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 73] Disconnected
+17:05:45: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 73] Disconnected
+17:05:46: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 73] Disconnected
+17:05:47: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 73] Disconnected
+17:05:48: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 75] Connected
+17:05:49: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 75] Connected
+17:05:50: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 75] Connected
+17:05:51: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 75] Connected
+17:05:52: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 75] Connected
+17:05:54: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 75] Connected

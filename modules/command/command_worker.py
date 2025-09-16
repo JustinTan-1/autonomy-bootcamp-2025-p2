@@ -59,10 +59,9 @@ def command_worker(
     while not controller.is_exit_requested():
         if not command_input_queue.queue.empty():
             path = command_input_queue.queue.get()
-            output_list = command_object.run(target, path)
-            if output_list:
-                for item in output_list:
-                    command_output_queue.queue.put(item)
+            run_command = command_object.run(target, path)
+            if run_command:
+                command_output_queue.queue.put(run_command)
     # Main loop: do work.
 
 

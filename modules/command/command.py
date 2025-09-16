@@ -65,11 +65,10 @@ class Command:  # pylint: disable=too-many-instance-attributes
         self,
         target: Position,
         path: telemetry.TelemetryData,  # Put your own arguments here
-    ) -> list:
+    ) -> str:
         """
         Make a decision based on received telemetry data.
         """
-        output_list = []
         self.steps += 1
         self.total_xv += path.x_velocity
         self.total_yv += path.y_velocity
@@ -98,15 +97,14 @@ class Command:  # pylint: disable=too-many-instance-attributes
                 param6=0,
                 param7=target.z,
             )
-            output_list.append(f"CHANGE_ALTITUDE: {amount_to_move}")
-            return output_list
+            return f"CHANGE_ALTITUDE: {amount_to_move}"
 
         target_angle = math.atan2(target.y - path.y, target.x - path.x)
         angle_difference = target_angle - path.yaw
         if angle_difference > (math.pi):
-            angle_difference = (2 * math.pi) - angle_difference
+            angle_difference = -1 * ((2 * math.pi) - angle_difference)
         elif angle_difference < -1 * (math.pi):
-            angle_difference = -1 * (2 * math.pi) - angle_difference
+            angle_difference = -1 * ((-2 * math.pi) - angle_difference)
         angle_difference_deg = math.degrees(angle_difference)
         if angle_difference_deg > 5 or angle_difference_deg < -5:
             # rotate the drone
@@ -124,9 +122,8 @@ class Command:  # pylint: disable=too-many-instance-attributes
                 param6=0,
                 param7=0,
             )
-            output_list.append(f"CHANGING_YAW: {angle_difference_deg}")
-            return output_list
-        return output_list
+            return f"CHANGING_YAW: {angle_difference_deg}"
+        return None
         # The appropriate commands to use are instructed below
 
         # Adjust height using the comand MAV_CMD_CONDITION_CHANGE_ALT (113)

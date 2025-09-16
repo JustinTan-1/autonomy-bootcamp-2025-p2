@@ -1,28 +1,28 @@
-14:18:47: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\modules\common\modules\logger\logger_main_setup.py | setup_main_logger | 62] main logger initialized
-14:18:48: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | main | 134] Connected!
-14:18:48: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGE_ALTITUDE: 1
-14:18:49: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGE_ALTITUDE: -1
-14:18:52: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: 63.43494882292201
-14:18:52: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: 90.0
-14:18:53: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: 116.56505117707799
-14:18:53: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: 45.0
-14:18:54: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: 63.43494882292201
-14:18:54: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: 90.0
-14:18:55: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: -26.565051177077994
-14:18:55: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: 45.0
-14:18:56: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: -90.0
-14:18:56: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: 45.0
-14:18:57: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: 90.0
-14:18:57: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: 135.0
-14:18:58: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: -26.565051177077994
-14:18:58: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: -45.0
-14:18:59: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: -90.0
-14:18:59: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: -45.0
-14:19:00: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: -90.0
-14:19:00: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: -135.0
-14:19:01: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: -63.43494882292201
-14:19:01: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: 90.0
-14:19:02: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: 116.56505117707799
-14:19:02: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: 45.0
-14:19:03: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: -63.43494882292201
-14:19:03: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: 90.0
+17:00:13: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\modules\common\modules\logger\logger_main_setup.py | setup_main_logger | 62] main logger initialized
+17:00:14: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | main | 134] Connected!
+17:00:14: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGE_ALTITUDE: 1
+17:00:14: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGE_ALTITUDE: -1
+17:00:17: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: 63.43494882292201
+17:00:18: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: 90.0
+17:00:18: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: 116.56505117707799
+17:00:19: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: 45.0
+17:00:19: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: 63.43494882292201
+17:00:20: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: 90.0
+17:00:20: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: 26.565051177077994
+17:00:21: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: 45.0
+17:00:21: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: 90.0
+17:00:22: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: 45.0
+17:00:22: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: 90.0
+17:00:23: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: 135.0
+17:00:23: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: -26.565051177077994
+17:00:24: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: -45.0
+17:00:24: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: -90.0
+17:00:25: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: -45.0
+17:00:25: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: -90.0
+17:00:26: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: -135.0
+17:00:26: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: -63.43494882292201
+17:00:27: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: -90.0
+17:00:27: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: -116.56505117707799
+17:00:28: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: -45.0
+17:00:28: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: -63.43494882292201
+17:00:29: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 79] CHANGING_YAW: -90.0
