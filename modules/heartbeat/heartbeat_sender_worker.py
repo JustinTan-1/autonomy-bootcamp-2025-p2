@@ -50,6 +50,7 @@ def heartbeat_sender_worker(
     # Instantiate class object (heartbeat_sender.HeartbeatSender)
     heart_beat_sender_object = heartbeat_sender.HeartbeatSender.create(connection)
     while not controller.is_exit_requested():
+        controller.check_pause()
         heart_beat_sender_object.run()
         time.sleep(1)
     # Main loop: do work.

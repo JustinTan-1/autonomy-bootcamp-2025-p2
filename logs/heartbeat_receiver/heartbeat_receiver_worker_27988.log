@@ -1,0 +1,11 @@
+22:02:25: [INFO] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 50] Logger initialized
+22:02:30: [WARNING] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 59] Missed Heartbeat 1
+22:02:31: [WARNING] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 59] Missed Heartbeat 2
+22:02:32: [WARNING] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 59] Missed Heartbeat 3
+22:02:33: [WARNING] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 59] Missed Heartbeat 4
+22:02:34: [WARNING] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 59] Missed Heartbeat 5
+22:02:35: [WARNING] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 59] Missed Heartbeat 6
+22:02:36: [WARNING] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 59] Missed Heartbeat 7
+22:02:37: [WARNING] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 59] Missed Heartbeat 8
+22:02:43: [WARNING] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 59] Missed Heartbeat 1
+22:02:45: [WARNING] [C:\Users\tanju\Desktop\WARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 59] Missed Heartbeat 1

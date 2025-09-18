@@ -213,19 +213,21 @@ def main() -> int:
     # Continue running for 100 seconds or until the drone disconnects
     output_queues = [heartbeat_receiver_output_queue, command_output_queue]
     disconnect_time = time.time() + 100
-    while time.time() < disconnect_time and connection:
+    while time.time() < disconnect_time:
         for item in output_queues:
             if not item.queue.empty():
                 msg = item.queue.get()
                 main_logger.info(msg)
+                if msg == "Disconnected":
+                    break
     # Stop the processes
     controller.request_exit()
     main_logger.info("Requested exit")
 
     # Fill and drain queues from END TO START
     heartbeat_receiver_output_queue.fill_and_drain_queue()
-    command_input_queue.fill_and_drain_queue()
     command_output_queue.fill_and_drain_queue()
+    command_input_queue.fill_and_drain_queue()
 
     main_logger.info("Queues cleared")
 

@@ -16,7 +16,6 @@ class HeartbeatReceiver:
     """
 
     __private_key = object()
-    output_queue = []
 
     @classmethod
     def create(
@@ -43,6 +42,7 @@ class HeartbeatReceiver:
         self.connection = connection
         self.local_logger = local_logger
         self.missed = 0
+        self.state = "Disconnected"
 
     def run(
         self,
@@ -58,10 +58,11 @@ class HeartbeatReceiver:
             self.missed += 1
             self.local_logger.warning(f"Missed Heartbeat {self.missed}")
             if self.missed >= 5:
-                return "Disconnected"
-            return None
-        self.missed = 0
-        return "Connected"
+                self.state = "Disconnected"
+        else:
+            self.missed = 0
+            self.state = "Connected"
+        return self.state
 
 
 # =================================================================================================

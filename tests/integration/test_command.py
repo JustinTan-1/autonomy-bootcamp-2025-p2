@@ -62,8 +62,8 @@ def stop(
     Stop the workers.
     """
     controller.request_exit()
-    command_input_queue.fill_and_drain_queue()
     command_output_queue.fill_and_drain_queue()
+    command_input_queue.fill_and_drain_queue()
 
 
 def read_queue(

@@ -52,6 +52,7 @@ def telemetry_worker(
     # Instantiate class object (telemetry.Telemetry)
     telemetry_object = telemetry.Telemetry.create(connection, local_logger)
     while not controller.is_exit_requested():
+        controller.check_pause()
         result = telemetry_object.run()
         if result:
             telemetry_queue.queue.put(result)

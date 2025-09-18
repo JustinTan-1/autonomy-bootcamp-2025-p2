@@ -58,6 +58,7 @@ def heartbeat_receiver_worker(
         connection, local_logger
     )
     while not controller.is_exit_requested():
+        controller.check_pause()
         result = heart_beat_receiver_object.run()
         if result:
             output_queue.queue.put(result)
